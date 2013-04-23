@@ -2,7 +2,7 @@
 
 2、本标记组件，留有beginTag,endTag的接口，可以做标红、标蓝等操作。
 
-3、相关的开发操作，直接进入com.zel.util.SignTagUtil类即可。
+3、相关的开发操作，直接使用项目SkyLightSignTag即可，测试时直接进入com.zel.util.SignTagUtil类即可。
     示例demo如下：
     public static void main(String[] args) {
       	String source = "abc中国人民vb";
