@@ -1,0 +1,29 @@
+1、由SkyLightAnalyzer作为分词组件来做的标记组件。
+
+2、本标记组件，留有beginTag,endTag的接口，可以做标红、标蓝等操作。
+
+3、相关的开发操作，直接进入com.zel.util.SignTagUtil类即可。
+    示例demo如下：
+    public static void main(String[] args) {
+      	String source = "abc中国人民vb";
+    		List<String> list = new ArrayList<String>();
+    
+    		list.add("中国");
+    		list.add("中国人");
+    		list.add("abc");
+    		list.add("a");
+    		list.add("v");
+    		
+    		String beginTag = "<red>";
+    		String endTag = "</red>";
+    
+    		SignTagUtil tagUtil = new SignTagUtil(source, list, beginTag, endTag);
+    
+    		String result = tagUtil.getSingTagResult();
+    		System.out.println(result);
+	}
+  
+  输出结果如下：<red>abc</red><red>中国人</red>民vb
+
+
+    
